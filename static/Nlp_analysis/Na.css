@@ -1,0 +1,77 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Open Sans Light";
+	letter-spacing: .07em; /* 字母间隔大小 */
+}
+
+html {
+	height: 100%;
+	width:100%;
+}
+.title{
+    position: absolute;
+	left: 30%;
+	top: 0%;
+	color:pink;
+}
+
+.inputdata{
+    width: 450px;
+	height: 300px;
+	background-color: rgba(255,255,255, 0.3);
+	/* 居中开始 */
+	position: absolute;
+	left: 50%;
+	top: 35%;
+	transform: translate(-50%, -50%);
+	/* 居中结束 */
+	border-radius: 10px;
+	padding: 0 50px; /* 左右留出空余 */
+
+}
+.inputdata textarea{
+    position: absolute;
+	left: 10%;
+	top: 10%;
+	border: 0;
+	width: 450px;
+	height: 150px;
+	border-bottom: 1px solid #ccc;
+	padding: 10px 0 10px 10px;
+
+}
+.inputdata #button1{
+    width: 450px;
+	line-height: 30px;
+	border: 0;
+	border-radius: 3px;
+	margin-top: 20px;
+	background-color:rgb(255,250,240);
+	font-size: 16px;
+	text-align: center;
+	cursor: pointer;
+	color: #accbee;
+	font-weight: bold;
+	position: absolute;
+	left: 10%;
+	top: 70%;
+
+}
+
+.ana{
+    width: 950px;
+	height: 200px;
+
+	background-color: rgba(255,255,255, 0.3);
+	/* 居中开始 */
+	position: absolute;
+	left: 50%;
+	top: 85%;
+	transform: translate(-50%, -50%);
+	/* 居中结束 */
+	border-radius: 10px;
+	padding: 0 50px; /* 左右留出空余 */
+}
+
+

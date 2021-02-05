@@ -1,0 +1,142 @@
+/* 清除默认样式 同时给所有元素设置样式 */
+			* {
+				margin: 0;
+				padding: 0;
+				font-family: "Open Sans Light";
+				letter-spacing: .07em; /* 字母间隔大小 */
+			}
+			/* 因为下面想设置body、wrap区域的宽高为整个窗口高度 所以得先设置html也得这样设置
+				 这里得注意 body 和 html 的区别
+				 1.如果body及其子元素想设置高度为窗口高度 那么得设置h向下面这样设置html
+
+				 2.在body里面设置background-color时，发现整个窗口都会变了颜色 这容易产生错觉： body == 窗口
+			*/
+			html {
+				height: 100%;
+			}
+			body {
+				height: 100%;
+				background:linear-gradient(to top,#dbdcd7,#fdd6bd);
+			}
+			/* 继承窗口高度 设置一个渐变色向右渐变  渐变色推荐网站：https://www.sj520.cn/tools/jianbian/  应该有你喜欢的吧
+			 background:linear-gradient(to top ,#dbdcd7,#1c1a27);
+			 */
+			.wrap {
+				height: 100%;
+
+
+			}
+			/* 这个是登录区域 */
+			.login-wrap {
+				width: 350px;
+				height: 350px;
+				background-color: rgba(255,255,255, 0.3);
+				/* 居中开始 */
+				position: absolute;
+				left: 30%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				/* 居中结束 */
+				border-radius: 10px;
+				padding: 0 50px; /* 左右留出空余 */
+			}
+			/* 给最上面的Login这个标题设置样式 */
+			.login-title {
+				font-size: 25px;
+				text-shadow:0 0 20px;
+				text-align: center;
+				line-height: 100px;
+				color:rgb(255, 171, 124);
+				font-weight: bold;
+			}
+			/* 输入设置样式 */
+			.login-form .login-input{
+				display: block; /* input 标签是行内元素 */
+				width: 100%;
+				border: 0;
+				border-bottom: 1px solid #ccc;
+				padding: 10px 0 10px 10px;
+				margin-bottom: 20px;
+				outline: none; /* 输入框边框去掉 */
+				background-color: transparent; /* 透明色 */
+			}
+			.login-form .login-input::placeholder {
+				text-transform: uppercase; /* 设置placeholder内容的大小写 */
+				color: #bdbdbd;
+			}
+			/* 给登录提交按钮设置样式 */
+			.login-form .login-submit {
+				width: 100%;
+				line-height: 30px;
+				border: 0;
+				border-radius: 3px;
+				margin-top: 20px;
+				background-color:rgb(255,250,240);
+				font-size: 16px;
+				text-align: center;
+				cursor: pointer;
+				color: rgb(86, 122, 134);
+				font-weight: bold;
+			}
+			/* tip 区域样式 */
+			.tip {
+				margin-top: 15px;
+				color:#a8caba;
+			}
+			.tip a {
+
+				padding-left: 120px;
+				text-decoration: none;
+				color:rgb(222, 116, 62);
+				text-shadow:0 0 10px;
+				font-weight: bold;
+			}
+            #photo1{
+
+				height: 270px;
+                position: absolute;
+				left: 50%;
+				top: 0%;
+
+            }
+
+            .sett{
+                position: absolute;
+				left: 92%;
+				top: 60%;
+            }
+
+
+
+            .sett a{
+                font-family: "Open Sans Light";
+                font-weight: bold;
+                display:inline-block;
+                margin-top: 15px;
+				width:104.5px;
+                height:40px;
+                border-radius: 3px;
+                background-color:#55585a;
+                font-size:14px;
+                color:#fff;
+                text-decoration:none;
+
+                line-height:40px;
+
+            }
+            .sett a:hover{
+                background:linear-gradient(to top,#4ca1af,#c4e0e5);
+            }
+
+            .tit{
+                position: absolute;
+				left: 3%;
+				top: 5%;
+                font-family: "Open Sans Light";
+                font-weight: bold;
+                font-size:28px;
+                text-shadow:0 0 10px;
+				line-height: 40px;
+				color:rgb(255, 171, 124);
+
+            }

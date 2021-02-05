@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图像加密</title>
+    <link rel="stylesheet" href="{% static 'Encode/encode.css'%}">
+    <style>
+
+        body{
+            background: url("../../static/image/gap.jpg") ;
+        }
+    </style>
+    <script>
+
+    downloadIamge: function(imgsrc, name) {
+    let image = new Image();
+     image.setAttribute("crossOrigin", "anonymous");
+     image.onload = function() {
+       let canvas = document.createElement("canvas");
+       canvas.width = image.width;
+       canvas.height = image.height;
+       let context = canvas.getContext("2d");
+       context.drawImage(image, 0, 0, image.width, image.height);
+       let url = canvas.toDataURL("image/png"); //得到图片的base64编码数据
+       let a = document.createElement("a"); // 生成一个a元素
+       let event = new MouseEvent("click"); // 创建一个单击事件
+       a.download = name || "海报"; // 设置图片名称没有设置则为默认
+       a.href = url; // 将生成的URL设置为a.href属性
+       a.dispatchEvent(event); // 触发a的单击事件
+     };
+     image.src = imgsrc;
+   },
+   saveImg: function() {
+     this.downloadIamge("../../media/img_encode/{{path}}", "fix");
+   }
+
+</script>
+</head>
+<body>
+
+
+<div class="first">
+
+
+<form action="/encode/" method="post" enctype="multipart/form-data" id="form1">
+    {%csrf_token%}
+    <textarea name="ask" id="ask"  placeholder="*******Input your information here*******"></textarea>
+<!--    <textarea style="border:0;border-radius:5px;background-color:rgba(241,241,241,.98);width: 355px;height: 100px;padding: 10px;resize: none;" placeholder="询价备注（尺寸、材质等）"></textarea>-->
+    <br>
+    <br>
+    <input type="password" name="pwd" id="pwd" placeholder="在此添加你的密钥(必填)"  maxlength=6><br>
+    <input type="checkbox" name="confirm" id="choose" value="yes" >
+    <label for="choose">是否添加作者</label><br>
+
+    <input type="text" name="sig" id ="sig" placeholder="在此添加作者(可不填)" maxlength=5><br>
+    <h2 id="t4">{{tips_error}}</h2>
+    <input type="file" name="image_initial" id="image_initial"><br>
+    <input type="submit" name="login" id="login" value="确认提交(请提交PNG格式哦)" class="login-submit"/>
+</form>
+
+
+</div>
+
+
+
+
+
+<div class="repair">
+    {% if info == 'yes' %}
+    <h2 id="t1">这是你的原图</h2><br>
+    {% endif %}
+    <img id="initial"    src="../../media/{{imge}}" alt=""/><br>
+    {% if info == 'no' %}
+    <h2 id="t3">图像加工区</h2><br>
+    {% endif %}
+    {% if info == 'yes' %}
+    <h2 id="t2">图片处理好了请收下(右键保存)<a href="../../decode/">想直接试试</a></h2><br>
+    {% endif %}
+    <img id="fixed"  src="../../media/img_encode/{{path}}"   @click="saveImg">
+
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Open Sans Light";
+	letter-spacing: .07em; /* 字母间隔大小 */
+}
+
+html {
+	height: 100%;
+}
+.cen1{
+    width: 400px;
+	height: 120px;
+	background-color: rgba(255,255,255, 0.3);
+	/* 居中开始 */
+	position: absolute;
+	left: 52%;
+	top: 40%;
+	transform: translate(-50%, -50%);
+	/* 居中结束 */
+	border-radius: 10px;
+	padding: 0 50px; /* 左右留出空余 */
+
+
+}
+
+#button1{
+    position: absolute;
+	left: 78%;
+	top: 5%;
+    width: 80px;
+    height: 90px;
+    margin-top: 10px;
+    background-color:#fed026;
+    border: 1px solid #fed026;
+    border-radius: 4px;
+    font-size:20px;
+    font-weight: bold;
+    color: rgb(24, 31, 49);
+    cursor: pointer;
+
+}
+.nump{
+    position: absolute;
+	left: 3%;
+	top: 23%;
+
+
+
+}
+.hmp{
+    background: #EEE url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAHklEQVQImWNkYGBgYGD4//8/A5wF5SBYyAr+//8PAPOCFO0Q2zq7AAAAAElFTkSuQmCC) repeat;
+    text-shadow: 5px -5px black, 4px -4px white;
+    font-weight: bold;
+    font-size:24px;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.nump #num{
+    font-size:20px;
+    display: block; /* input 标签是行内元素 */
+	width: 80%;
+	border: 0;
+	border-bottom: 1px solid #ccc;
+	padding: 10px 0 10px 10px;
+	margin-bottom: 20px;
+	outline: none; /* 输入框边框去掉 */
+	background-color: transparent; /* 透明色 */
+
+}
+
+
+#title{
+    font-size: 38px;
+	text-shadow:0 0 10px;
+	text-align: center;
+	line-height: 100px;
+	position: absolute;
+	left: 38%;
+	top: 23%;
+	color:rgb(255, 171, 124);
+	font-weight: bold;
+
+
+}
+.cen2{
+    width: 360px;
+	height: 320px;
+	background-color: rgba(255,255,255, 0.3);
+	/* 居中开始 */
+	position: absolute;
+	left: 52%;
+	top: 40%;
+	transform: translate(-50%, -50%);
+	/* 居中结束 */
+	border-radius: 10px;
+	padding: 0 50px; /* 左右留出空余 */
+
+
+}
+.back{
+	background-color: rgba(255,255,255,);
+	/* 居中开始 */
+	position: absolute;
+	left: 87%;
+	top: 5%;
+
+	/* 居中结束 */
+	border-radius: 10px;
+	padding: 0 50px; /* 左右留出空余 */
+
+
+}
+
+.cen2 p{
+    text-indent: 2em;
+
+}
+.ask{
+    width: 280px;
+	height: 120px;
+    font-size:20px;
+    font-weight: bold;
+}
+.rep{
+    color: transparent;
+    background-color :rgb(123, 105, 54);
+    text-shadow : rgba(255,255,255,0.3) 0 5px 6px, rgba(255,255,255,0.1) 1px 3px 3px;
+    -webkit-background-clip : text;
+
+
+}

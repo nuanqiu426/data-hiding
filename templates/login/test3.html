@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="{% static 'login/testcss3.css'%}">
+		    <style>
+
+        body{
+            background: url("../../static/image/live_home.jpg") ;
+            background-size:cover;
+        }
+    </style>
+
+	</head>
+	<body>
+
+		<div class="wrap">
+			<div class="tit">
+				<p>阿<br>丘<br>杂<br>货<br>店</p>
+			</div>
+			<img  src="../../static/image/girl.png"   id="photo1" alt="">
+
+			<div class="login-wrap">
+				<div class="login-title">
+					<img  src="../../static/image/mate.png"  height="30" alt="">
+					登录... <a style="color:red">{{mess}}</a>
+
+				</div>
+				<div class="login-form">
+					<form action="/mainpage/success/" method="post">
+						 {%csrf_token%}
+						<input type="text" name="user" placeholder="账号/用户名" class="login-input">
+						<input type="password" name="password" placeholder="密码" class="login-input">
+						<input type="submit" name="login" value="登录" class="login-submit"/>
+
+					</form>
+					</div>
+				<div class="tip">
+					还没有账号?<a href="/Nuanqiu/register"><img src="../../static/image/home.png" alt=""  height="17">&nbsp成为小店会员</a>
+				</div>
+			</div>
+
+			<div class="sett">
+				<a href="/mainpage/knowme/"><img src="../../static/image/sunbed.svg"align="left" height="35">关于我</a><br>
+     			<a href="/Nuanqiu/whisper/"><img src="../../static/image/coffee-pot.svg"align="left" height="35">悄悄话</a><br>
+     			<a href="/Nuanqiu/answer"><img src="../../static/image/coffee-drink.svg"align="left" height="35">查看回复</a><br>
+
+			</div>
+		</div>
+
+	</body>
+</html>
+

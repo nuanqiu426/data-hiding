@@ -1,0 +1,104 @@
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .rg_layout{
+            width: 600px;
+            height: 350px;
+            border: 1px solid #eeeeee;
+            background-color: rgba(255,255,255, 0.3);
+            /* 让div水平居中 */
+            margin: auto;
+            margin-top: 180px;
+            /* padding: 15px; */
+            border-radius: 50px;
+        }
+        .rg_tip{
+            width: 30px;
+            height: 40px;
+            float: left;
+            margin-left:30px;
+            color:rgb(229, 28, 90);
+            font-weight: bold;
+            font-size:30px;
+            font-family: "Open Sans Light";
+            font-weight: bold;
+            font-size:28px;
+            text-shadow:0 0 10px;
+			line-height: 40px;
+
+        }
+        .rg_left{
+            /* border: 1px solid red; */
+            width: 30px;
+            height: 40px;
+            float: left;
+            margin: 15px;
+            font-weight: bold;
+            font-size:30px;
+        }
+        .rg_left p:first-child{
+            color: rgb(24, 31, 49);
+
+        }
+
+        .rg_center{
+
+
+            /* border: 1px solid red; */
+             float: left;
+             position: relative;
+			 left: -1%;
+			 top: 10%;
+
+        }
+        .rg_right{
+            /* border: 1px solid red; */
+            float: right;
+
+
+
+        }
+        .rg_right p:first-child{
+            /* color: #fed026; */
+            font-size: 15px;
+        }
+        .rg_right p a{
+            color:#fed026;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .td_left{
+            width: 100px;
+            text-align: right;
+            height: 45px;
+            color: rgb(24, 31, 49);
+        }
+        .td_right{
+            padding-left: 50px;
+            color: #fed026;
+        }
+        #username,#password,#id_number,#guess{
+            width: 255px;
+            height: 32px;
+            border: 1px solid #fed026;
+            /* 设置边框圆角 */
+            border-radius: 5px;
+            padding-left: 10px;
+
+        }
+
+
+        #btn_sub{
+            width: 280px;
+            height: 40px;
+            margin-top: 10px;
+            background-color:#fed026;
+            border: 1px solid #fed026;
+            border-radius: 4px;
+            font-size:20px;
+            font-weight: bold;
+            color: rgb(24, 31, 49);
+            cursor: pointer;
+        }

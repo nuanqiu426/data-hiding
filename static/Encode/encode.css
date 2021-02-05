@@ -1,0 +1,189 @@
+* {
+	margin: 0;
+    padding: 0;
+	font-family: "Open Sans Light";
+	letter-spacing: .07em; /* 字母间隔大小 */
+}
+			/* 因为下面想设置body、wrap区域的宽高为整个窗口高度 所以得先设置html也得这样设置
+				 这里得注意 body 和 html 的区别
+				 1.如果body及其子元素想设置高度为窗口高度 那么得设置h向下面这样设置html
+
+				 2.在body里面设置background-color时，发现整个窗口都会变了颜色 这容易产生错觉： body == 窗口
+			*/
+html {
+	height: 100%;
+}
+.first{
+    width: 500px;
+	height: 788px;
+	background-color: rgba(255,255,255, 0.3);
+	/* 居中开始 */
+	position: absolute;
+	left: 3%;
+	top: 3%;
+
+	/* 居中结束 */
+
+
+}
+.first #form1{
+    
+    margin-top: 15px;
+    position: absolute;
+	left: 10%;
+	top: 4%;
+
+}
+.first #pwd{
+    display: block; /* input 标签是行内元素 */
+	width: 100%;
+	border: 0;
+	border-bottom: 1px solid #ccc;
+	padding: 10px 0 10px 10px;
+	margin-bottom: 20px;
+	outline: none; /* 输入框边框去掉 */
+	background-color: transparent; /* 透明色 */
+
+
+}
+.first #sig{
+    display: block; /* input 标签是行内元素 */
+	width: 100%;
+	border: 0;
+	border-bottom: 1px solid #ccc;
+	padding: 10px 0 10px 10px;
+	margin-bottom: -5px;
+	outline: none; /* 输入框边框去掉 */
+	background-color: transparent; /* 透明色 */
+
+
+}
+.first #t4{
+    font-size: 22px;
+	text-shadow:0 0 10px;
+	text-align: center;
+	line-height: 100px;
+    color: yellow;
+    letter-spacing: 0;
+    text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555;
+
+
+}
+.first #login{
+    width: 100%;
+	line-height: 30px;
+	border: 0;
+	border-radius: 3px;
+	margin-top: 5px;
+	background-color:rgb(255,250,240);
+	font-size: 16px;
+	text-align: center;
+	cursor: pointer;
+	color: rgb(86, 122, 134);
+	font-weight: bold;
+
+
+}
+.first #image_initial{
+    width: 80%;
+	line-height: 30px;
+	border: 0;
+	border-radius: 3px;
+	margin-top: 5px;
+    color:rgb(196, 175, 125);
+	font-size: 16px;
+	text-align: center;
+	cursor: pointer;
+
+	font-weight: bold;
+}
+
+.repair{
+    width: 605px;
+	height: 835px;
+	background-color: rgba(255,255,255, 0.2);
+	/* 居中开始 */
+	position: absolute;
+	left: 53%;
+	top: 0%;
+
+	/* 居中结束 */
+
+
+}
+.repair #initial{
+    width: 550px;
+    height: 350px;
+    position: absolute;
+	left: 8%;
+	top: 6%;
+}
+.repair #fixed{
+    width: 550px;
+    height: 350px;
+    margin-top: 15px;
+    position: absolute;
+	left: 8%;
+	top: 54%;
+
+
+}
+.repair #t1{
+    font-size: 25px;
+	text-align: center;
+	line-height: 100px;
+	font-weight: bold;
+	position: absolute;
+	left: 0%;
+	top: -3%;
+    color: gold;
+    letter-spacing: 0;
+    text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555;
+
+}
+.repair #t2{
+    font-size: 25px;
+	text-shadow:0 0 10px;
+	text-align: center;
+	line-height: 100px;
+	color:pink;
+	font-weight: bold;
+	position: absolute;
+	left: 0%;
+	top: 46%;
+    color: gold;
+    letter-spacing: 0;
+    text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555;
+
+
+}
+.repair #t3{
+    font-size: 30px;
+	text-shadow:0 0 10px;
+	text-align: center;
+	line-height: 100px;
+	font-weight: bold;
+	position: absolute;
+	left: 40%;
+	top: 46%;
+    color: gold;
+    letter-spacing: 0;
+    text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555;
+
+
+}
+
+
+
+.first #ask{
+    border:0;
+    border-radius:5px;
+    background-color:rgba(241,241,241,.98);
+    width: 355px;
+    height: 380px;
+    padding: 10px;
+    resize: none;
+
+
+}
+

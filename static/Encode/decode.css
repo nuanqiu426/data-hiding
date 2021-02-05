@@ -1,0 +1,125 @@
+* {
+	margin: 0;
+    padding: 0;
+	font-family: "Open Sans Light";
+	letter-spacing: .07em; /* 字母间隔大小 */
+}
+			/* 因为下面想设置body、wrap区域的宽高为整个窗口高度 所以得先设置html也得这样设置
+				 这里得注意 body 和 html 的区别
+				 1.如果body及其子元素想设置高度为窗口高度 那么得设置h向下面这样设置html
+
+				 2.在body里面设置background-color时，发现整个窗口都会变了颜色 这容易产生错觉： body == 窗口
+			*/
+html {
+	height: 100%;
+}
+.first{
+    width: 400px;
+	height: 238px;
+	background-color: rgba(255,255,255, 0.1);
+	/* 居中开始 */
+	position: absolute;
+	left: 33%;
+	top: 3%;
+
+	/* 居中结束 */
+
+
+}
+.second{
+    width: 820px;
+	height: 838px;
+	background-color: rgba(255,255,255, 0.3);
+	/* 居中开始 */
+	margin: auto;
+    margin-top: 0px;
+
+	/* 居中结束 */
+
+
+}
+.first #pwd{
+    position: absolute;
+    left: 15%;
+    top: 5%;
+    display: block; /* input 标签是行内元素 */
+	width: 60%;
+	border: 0;
+	border-bottom: 1px solid #ccc;
+	padding: 10px 0 10px 10px;
+	margin-bottom: 20px;
+	outline: none; /* 输入框边框去掉 */
+	background-color: transparent; /* 透明色 */
+    text-align: center;
+
+}
+.first #initial{
+    position: absolute;
+    left: 15%;
+    top: 19%;
+    width: 80%;
+	line-height: 30px;
+	border: 0;
+	border-radius: 3px;
+	margin-top: 20px;
+    color:rgb(196, 175, 125);
+	font-size: 16px;
+	text-align: center;
+	cursor: pointer;
+
+	font-weight: bold;
+}
+.first #login{
+    position: absolute;
+    left: 18%;
+    top: 48%;
+    width: 60%;
+	line-height: 30px;
+	border: 0;
+	border-radius: 3px;
+	margin-top: 20px;
+	background-color:rgb(255,250,240);
+	font-size: 16px;
+	text-align: center;
+	cursor: pointer;
+	color: rgb(86, 122, 134);
+	font-weight: bold;
+
+}
+
+
+.second #ask{
+    width: 720px;
+	height: 320px;
+    font-size:20px;
+    position: absolute;
+    left: 23%;
+    top: 16%;
+
+}
+.second #aska{
+    font-size:25px;
+    text-indent:2em;
+    margin-top: 0px;
+}
+.second #com{
+    text-align: center;
+    font-size:25px;
+    margin-top: 0px;
+
+
+}
+.second #title{
+    text-align: center;
+    font-size:55px;
+    margin-top: 0px;
+
+}
+#button2{
+    position: absolute;
+	left: 48%;
+	top: 85%;
+	height:60px;
+	cursor: pointer;
+
+}

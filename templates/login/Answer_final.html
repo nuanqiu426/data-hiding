@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查看回复</title>
+    <link rel="stylesheet" href="{% static 'login/whisper_f.css'%}">
+    <style>
+
+        body{
+            background: url({{back}}) ;
+            background-size:cover;
+        }
+    </style>
+</head>
+<body>
+{% if info == 'no' %}
+
+<h1 id="title">{{mess}}</h1>
+<div class="cen1">
+<form action="/Nuanqiu/answer/" method="post">
+                    {%csrf_token%}
+                    <table >
+                        <tr class="nump">
+
+                                <td class="hmp">号码牌&nbsp记得吗&nbsp&nbsp</td>
+
+
+
+                            <td class="td_right"><input type="text" name="num" id="num" placeholder="\号码牌\" maxlength=30></td>
+
+                        </tr>
+
+                        <tr>
+                            <td><input type="submit" value="记得" id="button1"></td>
+                        </tr>
+
+                    </table>
+                </form>
+</div>
+{% endif %}
+
+
+{% if info == 'yes' %}
+
+<div class="cen2">
+<h1 class="rep">记得你问我&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp↗↗↗↗</h1>
+<div class="ask"><p >{{ask}}</p></div>
+
+<h1 class="rep">{{reply}}&nbsp</h1>
+<div class="ask"><p>{{answer}}:)</p></div>
+</div>
+
+{% endif %}
+<div class="back"><a href="/Nuanqiu/login/"><img src="../../static/image/chevron-left.svg" height="60"></a>
+</div>
+</body>
+</html>

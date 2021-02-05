@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tell me something</title>
+    <link rel="stylesheet" href="{% static 'login/whisper.css'%}">
+    <script>
+	function copyFn() {
+		var val = document.getElementById('copyMy');
+		window.getSelection().selectAllChildren(val);
+		document.execCommand("Copy");
+		alert("通过这个号码牌查看回复哦。");
+		window.location.href="../login/";
+
+	}
+</script>
+    <style>
+
+        body{
+            background: url({{photo_url}}) ;
+            background-size:cover;
+        }
+    </style>
+
+
+</head>
+<body>
+
+{% if info == 'no' %}
+
+<h1 id="ans">{{tip}}</h1>
+<div class="total">
+
+
+<form action="/Nuanqiu/whisper/" method="post">
+                    {%csrf_token%}
+                    <table >
+                        <tr>
+
+                            <td class="td_right">
+
+                                <textarea  name="ask" id="ask" placeholder="{{word}}"></textarea>
+                            </td>
+
+                        </tr>
+
+                        <input type="submit" value="请回答" id="button1">
+                    </table>
+                </form>
+</div>
+{% endif %}
+
+{% if info == 'yes' %}
+
+<div class="total">
+    <p id="pin">-----凭借这个号码牌查看回复哦-----    </p>
+<div class="nump">
+    <span style="font-size:20px">👉</span>
+    <span id="copyMy" style="font-size:30px">{{alphabet}}</span>
+    <span style="font-size:20px">👈</span>
+
+</div>
+    <button onClick="copyFn()" id="button2">一键复制</button>
+</div>
+
+
+{% endif %}
+</body>
+</html>

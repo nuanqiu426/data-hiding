@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>情感分析</title>
+    <link rel="stylesheet" href="{% static 'Nlp_analysis/Na.css'%}">
+    <style>
+        body {
+	            height: 100%;
+                background:linear-gradient(to top,#fddb92,#d1fdff);
+	            background:{{bcolor}};
+
+}
+
+    </style>
+</head>
+<body>
+<h1 class="title" style="color:{{color}}">这里是情感分析(暂时只支持英文)</h1>
+<div class="inputdata">
+
+    <form action="/nlp/s/" method="post">
+    {%csrf_token%}
+    <textarea name="article" id="" cols="30" rows="4" placeholder="Input here">
+Input here
+
+    </textarea>
+    <input type="submit" value="提交" id="button1">
+</form>
+</div>
+{% if info == 'yes' %}
+<div class="ana" >
+    <h1 style="color:{{color}}">{{art}}</h1>
+    <h2>详细数据：{{art_detail}}</h2>
+</div>
+{% endif %}
+
+
+</body>
+</html>

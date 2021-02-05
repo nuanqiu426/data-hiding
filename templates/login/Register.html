@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'login/register.css'%}">
+    <title>注册页面</title>
+    <style>
+
+        body{
+            background: url("../../static/image/night.jpg") no-repeat center;
+        }
+    </style>
+</head>
+<body>
+    <div class="rg_layout">
+        <div class = "rg_left">
+            <p>这<br>里<br>进<br>店<br>哦</p>
+
+        </div>
+
+        <div class = "rg_center">
+            <div class="rg_form">
+                <form action="/Nuanqiu/register/" method="post">
+                    {%csrf_token%}
+                    <table >
+                        <tr>
+                            <td class="td_left"><label for="username"></label> 用户名</td>
+                            <td class="td_right"><input type="text" name="username" id="username" placeholder="请输入用户名" maxlength=10></td>
+                        </tr>
+                        <tr>
+                            <td class="td_left"><label for="password"></label> 密码&nbsp&nbsp</td>
+                            <td class="td_right"><input type="password" name="password" id="password" placeholder="请输入密码" maxlength=8></td>
+                        </tr>
+                        <tr>
+                            <td class="td_left"><label for="id_number"></label> 账号&nbsp&nbsp</td>
+                            <td class="td_right"><input type="text" name="id_number" id="id_number" placeholder="请输入账号" maxlength=9></td>
+                        </tr>
+                        <tr>
+                            <td class="td_left"><label for="guess"></label> 谁呀&nbsp&nbsp</td>
+                            <td class="td_right"><input type="text" name="guess" id="guess" placeholder="给点提示信息呗"></td>
+                        </tr>
+<!--                        <tr>-->
+<!--                            <td class="td_left"><label for="tel"></label> 手机号</td>-->
+<!--                            <td class="td_right"><input type="text" name="tel" id="tel" placeholder="请输入手机号"></td>-->
+<!--                        </tr>-->
+                        <tr>
+                            <td class="td_left"><label>哪里人</label></td>
+                            <td class="td_right"><input type="radio" name="gender" value="male">地球人
+                                <input type="radio" name="gender" value="famale">外星人
+                            </td>
+                        </tr>
+<!--                        <tr>-->
+<!--                            <td class="td_left"><label for="birthday">出生日期</label></td>-->
+<!--                            <td class="td_right"><input type="data" name="birthday" id="birthday" placeholder="年/月/日"></td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->{{word}}
+<!--                            <td class="td_left"><label for="checkcode">验证码</label></td>-->
+<!--                            <td class="td_right"><input type="text" name="checkcode" id="checkcode" placeholder="请输入验证码">-->
+<!--                                <img id ="img_check" src="img/2.png" >-->
+<!--                            </td>-->
+<!--                        </tr>-->
+                        <tr>
+                            <td colspan="2" align="center"><input type="submit" id = "btn_sub" value="注册"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <div class="rg_tip">{{tip}}</div>
+        <div class = "rg_right">
+            <p >已有账号?&nbsp;  <a href="/Nuanqiu/login/">&nbsp;立即登录&nbsp;</a></p>
+        </div>
+    </div>
+</body>
+</html>
